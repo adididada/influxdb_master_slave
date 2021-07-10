@@ -22,9 +22,9 @@ jobs:
     - name: Build the Docker image
       run: | 
         cd /opt/influxdb
-        docker build . --file Dockerfile --tag inview/influxdb:v1
+        docker build . --file Dockerfile --tag influxdb:alpine-ssl
         mkdir -p /opt/images
-        docker save -o /opt/images/influxdb.tar inview/influxdb
+        docker save -o /opt/images/influxdb.tar influxdb:alpine-ssl
         cd /opt/images
         bzip2 -c influxdb.tar
     - name : Upload packages
