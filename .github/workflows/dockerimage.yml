@@ -18,7 +18,7 @@ jobs:
     - uses: actions/checkout@master
     - name: Clone source code
       run: |
-        git clone --depth=1 -b inspur https://github.com/liubaoxyz/influxdb.git /opt/influxdb
+        git clone --depth=1 -b inspur https://github.com/adididada/influxdb.git /opt/influxdb
     - name: Build the Docker image
       run: | 
         cd /opt/influxdb
